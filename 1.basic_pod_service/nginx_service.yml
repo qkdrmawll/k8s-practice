@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+  namespace: eunji 
+
+spec:
+# node를 통해 직접 접근 가능한 타입
+  type: NodePort
+  ports:
+  - port: 80 # service port를 의미
+    targetPort: 80 # service가 라우팅해줄 대상의 port
+    nodePort: 30303 
+  # pod의 labels.appr과 service.app이 일치해야함
+  selector:
+    app: my-nginx
+

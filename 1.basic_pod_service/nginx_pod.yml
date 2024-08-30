@@ -1,0 +1,14 @@
+apiVersion: v1 # 스크립트의 버전 명시
+kind: Pod # 자원의 종류를 명시
+metadata:
+  name: nginx-pod
+  namespace: eunji 
+  # service의 selector.app을 통해 매핑
+  labels:
+    app: my-nginx # 보통 이름과 동일
+spec: # 한 파드안에 nginx redis 두개의 컨테이너를 구성
+  containers:
+  - name: nginx
+    image: nginx
+    ports:
+    - containerPort: 80
