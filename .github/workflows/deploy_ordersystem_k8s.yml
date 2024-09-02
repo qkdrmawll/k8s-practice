@@ -33,7 +33,7 @@ jobs:
 
       - name: build and push docker images to ecr
         env:
-          REGISTRY: 346903264902.dkr.ecr.ap-northeast-2.amazonaws.com 
+          REGISTRY: 346903264902.dkr.ecr.ap-northeast-2.amazonaws.com
           REPOSITORY: eunji-ordersystem
         run: |
           docker build -t $REGISTRY/$REPOSITORY:latest \

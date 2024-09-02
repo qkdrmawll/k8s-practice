@@ -1,6 +1,5 @@
 # 아래의 주요 key secret은 쿠버네티스의 secret 자원을 사용하여 실행시점에 대체시킨다
 
-
 server:
   port: 8080
 spring:
