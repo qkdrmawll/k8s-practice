@@ -39,6 +39,11 @@ spec:
               secretKeyRef:
                 key: DB_HOST
                 name: qkdrmawll-app-secrets
+          - name: DB_USERNAME
+            valueFrom:
+              secretKeyRef:
+                key: DB_USERNAME
+                name: qkdrmawll-app-secrets
           - name: DB_PASSWORD
             valueFrom:
               secretKeyRef:
