@@ -59,7 +59,7 @@ public class ProductService {
         }
         try {
             byte[] bytes = image.getBytes();
-            Path path = Paths.get("/tmp/",
+            Path path = Paths.get("/Users/qkdrmawll/Documents/ordersystem/",
                     product.getId()+"_"+ image.getOriginalFilename());
             Files.write(path,bytes, StandardOpenOption.CREATE, StandardOpenOption.WRITE);
             product.updateImagePath(path.toString());
@@ -77,7 +77,7 @@ public class ProductService {
         try {
             byte[] bytes = image.getBytes();
             String fileName = savedProduct.getId() + "_" + image.getOriginalFilename();
-            Path path = Paths.get("/Users/qkdrmawll/Documents/ordersystem/",
+            Path path = Paths.get("/tmp/",
                     fileName);
 //            local pc에 임시 저장-> 프론트에서 바이트로 받아와서 파일로 변환 해줘야하는데 임시 저장하면서 파일로 저장되기 때문에
             Files.write(path,bytes, StandardOpenOption.CREATE, StandardOpenOption.WRITE);
