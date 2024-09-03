@@ -42,7 +42,7 @@ jobs:
 
       - name: eks kubectl apply
         run: |
-          kubectl apply -f ./msa/member/k8s/member.yml
+          kubectl apply -f ./msa/member/k8s/member_depl.yml
           kubectl rollout restart deployment member-deployment -n eunji
 
       - name: build and push docker order images to ecr
